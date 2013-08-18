@@ -1,0 +1,14 @@
+PODS:
+  - ICPaintView (0.0.1)
+
+DEPENDENCIES:
+  - ICPaintView (from `..`)
+
+EXTERNAL SOURCES:
+  ICPaintView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  ICPaintView: f19421a842cced591c5a0a149a4d8f9270acd6e3
+
+COCOAPODS: 0.20.1

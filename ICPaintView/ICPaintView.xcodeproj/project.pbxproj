@@ -1,0 +1,156 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		0824F4C617C0433700CF39A4 /* image.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = image.vsh; sourceTree = "<group>"; };
+		0824F4C717C0433700CF39A4 /* image.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = image.fsh; sourceTree = "<group>"; };
+		0824F4C817C0558D00CF39A4 /* ICTextureContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICTextureContainer.h; sourceTree = "<group>"; };
+		0824F4C917C0558D00CF39A4 /* ICTextureContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICTextureContainer.m; sourceTree = "<group>"; };
+		0824F4CA17C05A8300CF39A4 /* ICTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICTexture.h; sourceTree = "<group>"; };
+		0824F4CB17C05A8300CF39A4 /* ICTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICTexture.m; sourceTree = "<group>"; };
+		087609FD17BF2D7400B9D9C0 /* ICPaintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPaintView.m; sourceTree = "<group>"; };
+		087609FE17BF2D7400B9D9C0 /* ICPaintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPaintView.h; sourceTree = "<group>"; };
+		087609FF17BF2D7A00B9D9C0 /* point.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = point.fsh; sourceTree = "<group>"; };
+		08760A0017BF2D7A00B9D9C0 /* point.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = point.vsh; sourceTree = "<group>"; };
+		08760A0117BF2D8200B9D9C0 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		08760A0217BF2D8200B9D9C0 /* fileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileUtil.h; sourceTree = "<group>"; };
+		08760A0317BF2D8200B9D9C0 /* fileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fileUtil.m; sourceTree = "<group>"; };
+		08760A0417BF2D8200B9D9C0 /* shaderUtil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shaderUtil.c; sourceTree = "<group>"; };
+		08760A0517BF2D8200B9D9C0 /* shaderUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shaderUtil.h; sourceTree = "<group>"; };
+		08760A0617BF2D9100B9D9C0 /* Particle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle2.png; sourceTree = "<group>"; };
+		08760A0D17BF647500B9D9C0 /* ICPaintCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPaintCommand.h; sourceTree = "<group>"; };
+		08760A0E17BF647500B9D9C0 /* ICPaintCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPaintCommand.m; sourceTree = "<group>"; };
+		08760A0F17BF648D00B9D9C0 /* ICPaintBrushCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPaintBrushCommand.h; sourceTree = "<group>"; };
+		08760A1017BF648D00B9D9C0 /* ICPaintBrushCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPaintBrushCommand.m; sourceTree = "<group>"; };
+		08A7839F17C088BC00B6F81D /* ICPaintStampCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPaintStampCommand.h; sourceTree = "<group>"; };
+		08A783A017C088BC00B6F81D /* ICPaintStampCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPaintStampCommand.m; sourceTree = "<group>"; };
+		08A783A217C0998600B6F81D /* brush_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush_glow.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		087609F217BF2CD900B9D9C0 = {
+			isa = PBXGroup;
+			children = (
+				087609F917BF2CF300B9D9C0 /* Classes */,
+				087609FC17BF2D0D00B9D9C0 /* Shaders */,
+				087609FB17BF2D0700B9D9C0 /* OtherSources */,
+				087609FA17BF2D0100B9D9C0 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		087609F917BF2CF300B9D9C0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				08760A0717BF529C00B9D9C0 /* command */,
+				087609FD17BF2D7400B9D9C0 /* ICPaintView.m */,
+				087609FE17BF2D7400B9D9C0 /* ICPaintView.h */,
+				0824F4C817C0558D00CF39A4 /* ICTextureContainer.h */,
+				0824F4C917C0558D00CF39A4 /* ICTextureContainer.m */,
+				0824F4CA17C05A8300CF39A4 /* ICTexture.h */,
+				0824F4CB17C05A8300CF39A4 /* ICTexture.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		087609FA17BF2D0100B9D9C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08A783A217C0998600B6F81D /* brush_glow.png */,
+				08760A0617BF2D9100B9D9C0 /* Particle2.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		087609FB17BF2D0700B9D9C0 /* OtherSources */ = {
+			isa = PBXGroup;
+			children = (
+				08760A0117BF2D8200B9D9C0 /* debug.h */,
+				08760A0217BF2D8200B9D9C0 /* fileUtil.h */,
+				08760A0317BF2D8200B9D9C0 /* fileUtil.m */,
+				08760A0417BF2D8200B9D9C0 /* shaderUtil.c */,
+				08760A0517BF2D8200B9D9C0 /* shaderUtil.h */,
+			);
+			path = OtherSources;
+			sourceTree = "<group>";
+		};
+		087609FC17BF2D0D00B9D9C0 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				0824F4C617C0433700CF39A4 /* image.vsh */,
+				0824F4C717C0433700CF39A4 /* image.fsh */,
+				08760A0017BF2D7A00B9D9C0 /* point.vsh */,
+				087609FF17BF2D7A00B9D9C0 /* point.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		08760A0717BF529C00B9D9C0 /* command */ = {
+			isa = PBXGroup;
+			children = (
+				08760A0D17BF647500B9D9C0 /* ICPaintCommand.h */,
+				08760A0E17BF647500B9D9C0 /* ICPaintCommand.m */,
+				08760A0F17BF648D00B9D9C0 /* ICPaintBrushCommand.h */,
+				08760A1017BF648D00B9D9C0 /* ICPaintBrushCommand.m */,
+				08A7839F17C088BC00B6F81D /* ICPaintStampCommand.h */,
+				08A783A017C088BC00B6F81D /* ICPaintStampCommand.m */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		087609F317BF2CD900B9D9C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 087609F617BF2CD900B9D9C0 /* Build configuration list for PBXProject "ICPaintView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 087609F217BF2CD900B9D9C0;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		087609F717BF2CD900B9D9C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		087609F817BF2CD900B9D9C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		087609F617BF2CD900B9D9C0 /* Build configuration list for PBXProject "ICPaintView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				087609F717BF2CD900B9D9C0 /* Debug */,
+				087609F817BF2CD900B9D9C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 087609F317BF2CD900B9D9C0 /* Project object */;
+}
