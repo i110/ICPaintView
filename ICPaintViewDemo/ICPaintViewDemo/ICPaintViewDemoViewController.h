@@ -32,6 +32,5 @@ typedef enum {
 - (IBAction)didCaptureButtonTapped:(id)sender;
 - (IBAction)didUndoButtonTapped:(id)sender;
 - (IBAction)didRedoButtonTapped:(id)sender;
-- (IBAction)didStampButtonTapped:(id)sender;
 
 @end

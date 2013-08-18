@@ -291,7 +291,6 @@ programInfo_t program[NUM_PROGRAMS] = {
 
 - (void)deallocCurrentTexture
 {
-    // texture
     if (currentTexture.id) {
 		glDeleteTextures(1, &currentTexture.id);
 		currentTexture.id = 0;
@@ -406,7 +405,6 @@ programInfo_t program[NUM_PROGRAMS] = {
 # pragma mark -
 # pragma mark Drawing
 
-// Drawings a line onscreen based on where the user touches
 - (void)drawLineFromPoint:(CGPoint)start toPoint:(CGPoint)end
 {
 	static GLfloat*		vertexBuffer = NULL;
@@ -416,18 +414,16 @@ programInfo_t program[NUM_PROGRAMS] = {
 	[EAGLContext setCurrentContext:context];
 	glBindFramebuffer(GL_FRAMEBUFFER, viewFramebuffer);
 	
-	// Convert locations from Points to Pixels
 	CGFloat scale = self.contentScaleFactor;
 	start.x *= scale;
 	start.y *= scale;
 	end.x *= scale;
 	end.y *= scale;
 	
-	// Allocate vertex array buffer
-	if(vertexBuffer == NULL)
+	if(vertexBuffer == NULL) {
 		vertexBuffer = malloc(vertexMax * 2 * sizeof(GLfloat));
+    }
 	
-	// Add points to the buffer so there are drawing points every X pixels
     CGFloat dx = (end.x - start.x);
     CGFloat dy = (end.y - start.y);
 	int count = MAX(ceilf(sqrtf(dx * dx + dy * dy) / kBrushPixelStep), 1);
@@ -442,7 +438,6 @@ programInfo_t program[NUM_PROGRAMS] = {
 		vertexCount += 1;
 	}
     
-	// Load data to the Vertex Buffer Object
 	glBindBuffer(GL_ARRAY_BUFFER, vboId);
 	glBufferData(GL_ARRAY_BUFFER, vertexCount * 2 * sizeof(GLfloat), vertexBuffer, GL_DYNAMIC_DRAW);
 	
@@ -585,7 +580,8 @@ programInfo_t program[NUM_PROGRAMS] = {
     }
 }
 
-- (UIImage*)getImage {
+- (UIImage*)captureImage
+{
 	size_t w = [self frame].size.width * self.contentScaleFactor;
 	size_t h = [self frame].size.height * self.contentScaleFactor;
 	int pixelCount = 4 * w * h;

@@ -22,9 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.paintView.delegate = self;
-    
+
+    self.paintView.delegate = self;    
     self.paintView.commandBuilder = self;
     [self.paintView setBrushColor:[UIColor colorWithRed:0.5 green:1 blue:1 alpha:0.2]];
     
@@ -37,9 +36,14 @@
 
 }
 
+- (void) didBeginDrawing:(ICPaintView*)sender
+{
+    // write some code you like
+}
+
 - (void) didEndDrawing:(ICPaintView*)sender
 {
-
+    // write some code you like
 }
 
 
@@ -56,8 +60,7 @@
 
 - (IBAction)didCaptureButtonTapped:(id)sender
 {
-    UIImage *image = [self.paintView getImage];
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    UIImage *image = [self.paintView captureImage];
     
     ICPaintViewDemoCapturedImageViewController *controller = [[ICPaintViewDemoCapturedImageViewController alloc] initWithNibName:@"ICPaintViewDemoCapturedImageViewController" bundle:[NSBundle mainBundle]];
     [controller view];
@@ -69,15 +72,10 @@
 {
     [self.paintView undo];
 }
+
 - (IBAction)didRedoButtonTapped:(id)sender
 {
     [self.paintView redo];
-}
-
-- (IBAction)didStampButtonTapped:(id)sender
-{
-    // [self.paintView drawImage:[UIImage imageNamed:@"stamp_laughing_man_128"] toRect:CGRectMake(100, 100, 100, 100)];
-    [self.paintView render];
 }
 
 - (ICPaintCommand*)buildCommand

@@ -11,8 +11,6 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
-
-
 typedef enum {
     ICPaintViewShaderPoint = 0,
     ICPaintViewShaderImage = 1,
@@ -23,6 +21,9 @@ typedef struct {
     GLsizei width, height;
 } textureInfo_t;
 
+# pragma mark -
+# pragma mark ICPaintViewDelegate
+
 @class ICPaintView;
 @protocol ICPaintViewDelegate <NSObject>
 @optional
@@ -30,11 +31,17 @@ typedef struct {
 - (void) didEndDrawing:(ICPaintView*)sender;
 @end
 
+# pragma mark -
+# pragma mark ICPaintCommandBuilder
+
 @class ICPaintCommand;
 @protocol ICPaintCommandBuilder <NSObject>
 @required
 - (ICPaintCommand*)buildCommand;
 @end
+
+# pragma mark -
+# pragma mark ICPaintView
 
 @interface ICPaintView : UIView
 
@@ -47,15 +54,13 @@ typedef struct {
 - (void)removeTextureImageforName:(NSString*)name;
 - (void)setCurrentTexture:(NSString*)textureName;
 
-- (void)clear;
+- (void)useShader:(ICPaintViewShader)shader;
 - (void)setBrushSize:(CGFloat)size;
 - (void)setBrushColor:(UIColor*)color;
-- (UIImage*)getImage;
-
-
 
 - (void)drawLineFromPoint:(CGPoint)start toPoint:(CGPoint)end;
 - (void)drawTextureToRect:(CGRect)rect;
+- (void)clear;
 - (void)render;
 
 - (void)undo;
@@ -63,6 +68,6 @@ typedef struct {
 - (BOOL)canUndo;
 - (BOOL)canRedo;
 
-- (void)useShader:(ICPaintViewShader)shader;
+- (UIImage*)captureImage;
 
 @end
