@@ -22,7 +22,6 @@
 		08760A0317BF2D8200B9D9C0 /* fileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fileUtil.m; sourceTree = "<group>"; };
 		08760A0417BF2D8200B9D9C0 /* shaderUtil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = shaderUtil.c; sourceTree = "<group>"; };
 		08760A0517BF2D8200B9D9C0 /* shaderUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shaderUtil.h; sourceTree = "<group>"; };
-		08760A0617BF2D9100B9D9C0 /* Particle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle2.png; sourceTree = "<group>"; };
 		08760A0D17BF647500B9D9C0 /* ICPaintCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPaintCommand.h; sourceTree = "<group>"; };
 		08760A0E17BF647500B9D9C0 /* ICPaintCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICPaintCommand.m; sourceTree = "<group>"; };
 		08760A0F17BF648D00B9D9C0 /* ICPaintBrushCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICPaintBrushCommand.h; sourceTree = "<group>"; };
@@ -61,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				08A783A217C0998600B6F81D /* brush_glow.png */,
-				08760A0617BF2D9100B9D9C0 /* Particle2.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
